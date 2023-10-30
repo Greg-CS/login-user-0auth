@@ -1,5 +1,6 @@
 import { BsFacebook, BsGithub, BsDiscord } from "react-icons/bs";
 import { useUser } from '@auth0/nextjs-auth0/client';
+import Link from "next/link";
 
 export default function Home() {
 
@@ -24,7 +25,7 @@ export default function Home() {
           </button>
         </div>
         <div className="relative top-32">
-          <a className="btn w-full" href="/api/auth/logout">Logout</a>      
+          <Link className="btn w-full" href="/api/auth/logout">Logout</Link>      
         </div>
       </div>
     </main>
@@ -35,11 +36,11 @@ export default function Home() {
     <main className="flex min-h-screen justify-center items-center">
       <div className="h-[30rem] w-[30rem] grid bg-white rounded-2xl justify-center items-center">
         <div className="py-10">
-          <a className="btn w-[45vw] h-[15vh] hover:bg-slate-300 border-0" href="/api/auth/login">Login</a>
+          <Link className="btn w-[45vw] h-[15vh] hover:bg-slate-300 border-0" href="/api/auth/login">Login</Link>
         </div>
         <div className="divider text-black">OR</div>
         <div className="py-10">
-          <a className="btn w-[45vw] h-[15vh] hover:bg-slate-300 border-0" href="/api/auth/login">register</a>
+          <Link className="btn w-[45vw] h-[15vh] hover:bg-slate-300 border-0" href="/api/auth/login">register</Link>
         </div>
       </div>
     </main>
